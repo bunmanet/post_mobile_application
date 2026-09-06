@@ -4,14 +4,16 @@ class InputFormCustom extends StatelessWidget {
   final TextEditingController controller;
   final String labelText;
   final String hintText;
-  final bool isPassword;
+  final bool obscureText;
+  final TextInputType? keyboardType;
 
   const InputFormCustom({
     super.key,
     required this.controller,
     required this.labelText,
     required this.hintText,
-    this.isPassword = false,
+    this.obscureText = false,
+    this.keyboardType,
   });
 
   @override
@@ -32,7 +34,8 @@ class InputFormCustom extends StatelessWidget {
           const SizedBox(height: 8),
           TextField(
             controller: controller,
-            obscureText: isPassword,
+            obscureText: obscureText,
+            keyboardType: keyboardType,
             decoration: InputDecoration(
               hintText: hintText,
               contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),

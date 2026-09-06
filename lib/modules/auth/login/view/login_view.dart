@@ -35,7 +35,7 @@ class LoginView extends GetView<LoginController> {
                 controller: controller.passwordController.value,
                 labelText: "Password",
                 hintText: "Password",
-                isPassword: true,
+                obscureText: true,
               ),
               SizedBox(
                 height: 45,

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 class ButtonCustomWidget extends StatelessWidget {
-  final VoidCallback onClick;
+  final VoidCallback? onClick;
   final bool loading;
   final String title;
 
   const ButtonCustomWidget({
     super.key,
     required this.onClick,
-    required this.loading,
+    this.loading = false,
     required this.title,
   });
 
